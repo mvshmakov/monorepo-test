@@ -1,4 +1,6 @@
 [core]
-    remote = mys3
+    remote = storage
 ['remote "mys3"']
     url = s3://dvc-temp/dmitry/johnnie/
+['remote "storage"']
+    url = ssh://dvc@35.194.53.251/home/dvc/storage
