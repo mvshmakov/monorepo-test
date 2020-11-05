@@ -44,13 +44,13 @@ evaluate:
   cmd: python src/evaluate.py model.pkl data/features scores.json prc.json
   deps:
   - path: data/features
-    md5: 2b5e0fdd787b569b4fcb4bafa543d270.dir
+    md5: f237c73d43f87f84081796e3c0e22e37.dir
   - path: model.pkl
-    md5: e393c2ed7a26eeab2360be08d6fc76e8
+    md5: c16ea7510023a79625da9c4de4bdabde
   - path: src/evaluate.py
     md5: 631fd3f13434edcf4abd56a5b798e8b2
   outs:
   - path: prc.json
-    md5: cd433c034acfa2ebd5679a3838b65c7c
+    md5: d3c57bccfa924bee85e00f674b8724f9
   - path: scores.json
-    md5: 06df1f4765480cd62052eab00517a8d2
+    md5: 662bf00be6fe3172b69944b9d6f704cd
