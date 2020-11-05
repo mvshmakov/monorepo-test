@@ -1,0 +1,3 @@
+dense: 512
+epochs: 5
+log_file: plots.csv
