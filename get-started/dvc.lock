@@ -21,16 +21,16 @@ featurize:
     md5: 02180903aa05599ceaa6ff6ee2471d00
   params:
     params.yaml:
-      featurize.max_features: 500
-      featurize.ngrams: 1
+      featurize.max_features: 1500
+      featurize.ngrams: 2
   outs:
   - path: data/features
-    md5: 2b5e0fdd787b569b4fcb4bafa543d270.dir
+    md5: f237c73d43f87f84081796e3c0e22e37.dir
 train:
   cmd: python src/train.py data/features model.pkl
   deps:
   - path: data/features
-    md5: 2b5e0fdd787b569b4fcb4bafa543d270.dir
+    md5: f237c73d43f87f84081796e3c0e22e37.dir
   - path: src/train.py
     md5: ad8e71b2cca4334a7d3bb6495645068c
   params:
@@ -39,7 +39,7 @@ train:
       train.seed: 20170428
   outs:
   - path: model.pkl
-    md5: e393c2ed7a26eeab2360be08d6fc76e8
+    md5: c16ea7510023a79625da9c4de4bdabde
 evaluate:
   cmd: python src/evaluate.py model.pkl data/features scores.json prc.json
   deps:
